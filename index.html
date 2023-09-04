@@ -218,12 +218,55 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              <tr onmouseout="spring_stop()" onmouseover="spring_start()" id="spring">
+                <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
+                  <div class="one">
+                    <div class="two" id='spring_video'>
+                      <video width="320" height="240" muted autoplay loop>
+                        <source src="images/spring.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <img src='images/spring.png' video width="320" height="240">
+                  </div>
+                  <script type="text/javascript">
+                    function spring_start() {
+                      var videoElem = document.querySelector('#spring_video video');
+                      videoElem.currentTime = 0;
+                      videoElem.play();
+                      document.getElementById('spring_video').style.opacity = "1";
+                    }
+                    function spring_stop() {
+                      document.getElementById('spring_video').style.opacity = "0";
+                    }
+                    spring_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:55%;vertical-align:text-top">
+                  <papertitle>Jello Spring System</papertitle>
+                  <br>
+                  Aug. 2023
+                  <br>
+                  <p></p>
+                  <p>
+                    Jello Spring system is a physically-based mass-spring simulation of a cube situated within an external force field.  The simulation showcases both collisions and deformation.
+                      I designed the environment, drawing inspiration from the Cornell Box.   
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
               <tr onmouseout="monte_carlos_stop()" onmouseover="monte_carlos_start()" id="monte_carlos">
                 <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
                   <div class="one">
                     <div class="two" id='monte_carlos_video'>
                       <video width="320" height="240" muted autoplay loop>
-                        <source src="images/out.mp4" type="video/mp4">
+                        <source src="images/monte_carlos.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
@@ -266,7 +309,7 @@
                   <div class="one">
                     <div class="two" id='coaster_video'>
                       <video width="320" height="180" muted autoplay loop>
-                        <source src="images/Coaster.mp4" type="video/mp4">
+                        <source src="images/coaster.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                     </div>
