@@ -219,6 +219,48 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              <tr onmouseout="mocap_stop()" onmouseover="mocap_start()" id="mocap">
+                <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
+                  <div class="one">
+                    <div class="two" id='mocap_video'>
+                      <video width="320" height="180" muted autoplay loop>
+                        <source src="images/mocap.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <img src='images/mocap.png' video width="320" height="180">
+                  </div>
+                  <script type="text/javascript">
+                    function mocap_start() {
+                      var videoElem = document.querySelector('#mocap_video video');
+                      videoElem.currentTime = 0;
+                      videoElem.play();
+                      document.getElementById('mocap_video').style.opacity = "1";
+                    }
+                    function mocap_stop() {
+                      document.getElementById('mocap_video').style.opacity = "0";
+                    }
+                    mocap_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:55%;vertical-align:text-top">
+                  <papertitle>Mocap Interpolation</papertitle>
+                  <br>
+                  Sep. 2023
+                  <br>
+                  <p></p>
+                  <p>
+                    Investigate the effects of various interpolation methods (Linear and Bezier) and rotation representations (Euler angles and Quaternions) on quality of motion-captured animations.  The methodology involves selecting
+                    a sequence of N frames, isolating keyframes, and then interpolating the motion for the frames in between.  The resulting animation is compared to the origin to assess smoothness and any vidual artifacts.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
               <tr onmouseout="spring_stop()" onmouseover="spring_start()" id="spring">
                 <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
                   <div class="one">
