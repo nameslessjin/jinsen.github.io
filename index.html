@@ -219,6 +219,49 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+              <tr onmouseout="metal_demo_stop()" onmouseover="metal_demo_start()" id="mocap">
+                <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
+                  <div class="one">
+                    <div class="two" id='metal_demo_video'>
+                      <video width="320" height="180" muted autoplay loop>
+                        <source src="images/metal_demos.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <img src='images/metal_demos.png' video width="320" height="180">
+                  </div>
+                  <script type="text/javascript">
+                    function metal_demo_start() {
+                      var videoElem = document.querySelector('#metal_demo_video video');
+                      // videoElem.currentTime = 0;
+                      videoElem.play();
+                      document.getElementById('metal_demo_video').style.opacity = "1";
+                    }
+                    function metal_demo_stop() {
+                      document.getElementById('metal_demo_video').style.opacity = "0";
+                    }
+                    mocap_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:55%;vertical-align:text-top">
+                  <papertitle>Metal Demos</papertitle>
+                  <br>
+                  Oct. 2023 (WIP)
+                  <br>
+                  <i class="fa fa-github"></i>
+                  <a href="https://github.com/nameslessjin/Learning-Metal">code</a>
+                  <p></p>
+                  <p>
+                    Venturing into the world of modern graphics with Metal as my guiding star! Proudly showcasing demos that feature cutting-edge rendering techniques: Physical-Based Rendering, Deferred Rendering, Shadow Mapping, and Particle and Flocking Systems. Enjoy! 
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
               <tr onmouseout="mocap_stop()" onmouseover="mocap_start()" id="mocap">
                 <td style="padding:20px;width:45%;vertical-align:middle;height: auto;">
                   <div class="one">
@@ -233,7 +276,7 @@
                   <script type="text/javascript">
                     function mocap_start() {
                       var videoElem = document.querySelector('#mocap_video video');
-                      videoElem.currentTime = 0;
+                      // videoElem.currentTime = 0;
                       videoElem.play();
                       document.getElementById('mocap_video').style.opacity = "1";
                     }
@@ -277,7 +320,7 @@
                   <script type="text/javascript">
                     function spring_start() {
                       var videoElem = document.querySelector('#spring_video video');
-                      videoElem.currentTime = 0;
+                      // videoElem.currentTime = 0;
                       videoElem.play();
                       document.getElementById('spring_video').style.opacity = "1";
                     }
@@ -322,7 +365,7 @@
                   <script type="text/javascript">
                     function monte_carlos_start() {
                       var videoElem = document.querySelector('#monte_carlos_video video');
-                      videoElem.currentTime = 0;
+                      // videoElem.currentTime = 0;
                       videoElem.play();
                       document.getElementById('monte_carlos_video').style.opacity = "1";
                     }
@@ -367,7 +410,7 @@
                   <script type="text/javascript">
                     function coaster_start() {
                       var videoElem = document.querySelector('#coaster_video video');
-                      videoElem.currentTime = 0;
+                      // videoElem.currentTime = 0;
                       videoElem.play();
                       document.getElementById('coaster_video').style.opacity = "1";
                     }
