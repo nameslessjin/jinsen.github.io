@@ -46,7 +46,7 @@ name {
 .one {
   width: 320px;
   /* height: 160px; */
-  position: relative;
+  /* position: relative; */
 }
 
 .two {
@@ -100,6 +100,11 @@ span.highlight {
 
   .selfi {
     width: 40%;
+  }
+
+  .one {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
