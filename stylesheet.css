@@ -67,3 +67,63 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+@media (max-width: 770px) { /* breakpoint for typical phone screens */
+
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .table-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .td_photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .selfi {
+    width: 40%;
+  }
+
+}
+
+@media (min-width: 770px) {
+
+  .td1 {
+    width: 45%;
+  }
+
+  .td2 {
+    width: 55%;
+  }
+
+  .td_intro {
+    width: 65%;
+  }
+
+  .td_photo {
+    width: 40%;
+    max-width: 40%;
+  }
+
+  .selfi {
+    width: 100%;
+  }
+}
