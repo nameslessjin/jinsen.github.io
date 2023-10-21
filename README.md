@@ -1,1 +1,1 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+This template is adpted from Jingtao Huang (https://www.jingtaoh.com/) and Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
