@@ -51,7 +51,7 @@ const ExpContent = {
 const ProjectContent = {
     header: {
         header: "Computer Graphics",
-        subheader: "Hover or click over projects to play"
+        subheader: "Hover over or click projects to play"
     },
     content: [
         {
