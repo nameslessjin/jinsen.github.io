@@ -52,15 +52,26 @@ name {
 
 .level {
   width: 320px;
+  margin: auto; 
+}
+
+.midlevel {
+  width: 320px;
+  min-height: 180px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .sublevel {
   width: 320px;
+  height: 180px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
 }
+
 
 .fade {
   transition: opacity .2s ease-in-out;
@@ -70,6 +81,46 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.tableDefault {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+}
+
+.tableWhite {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  min-height: 200px;
+  margin-top: 10px;
+}
+
+.tableBlue {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #a6cde6;
+  min-height: 200px;
+  margin-top: 10px;
+}
+
+.divIconText {
+  display: flex; 
+  gap: 5px; 
+  align-items: center;
 }
 
 @media (max-width: 770px) { /* breakpoint for typical phone screens */
@@ -117,6 +168,9 @@ span.highlight {
 
   .td1 {
     width: 45%;
+    padding:20px;
+    vertical-align:middle;
+    height: auto;
   }
 
   .td2 {
