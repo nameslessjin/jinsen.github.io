@@ -28,8 +28,7 @@ const ExpContent = {
             imgWidth: '320',
             imgHeight: '160',
             duration: "May. 2022 - Sep. 2022",
-            description: "Created base pipeline, augmented data for the research on dense feature matching between UAV and Street View using PyTorch and PyTorch lightning. \
-                    Currently working on a Physically based rendering pipeline using WebGPU for the Next Gen Text-to-Avatar",
+            description: "Constructed and integrated a Code Coverage Analysis server with Redis for robust performance, AWS S3 Bucket for file storage, Docker and Kubernetes for portability, and D3.js for data visualizations.",
         },
         {
             imageUrl: "images/cbl.png",
