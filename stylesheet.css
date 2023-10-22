@@ -67,6 +67,7 @@ name {
   width: 320px;
   height: 180px;
   position: absolute;
+  opacity: 0;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -123,6 +124,17 @@ span.highlight {
   align-items: center;
 }
 
+.td2 {
+  padding:20px;
+  vertical-align:text-top;
+}
+
+.tdHeader {
+  padding:20px;
+  width:100%;
+  vertical-align:middle
+}
+
 @media (max-width: 770px) { /* breakpoint for typical phone screens */
 
   table {
@@ -157,9 +169,13 @@ span.highlight {
     width: 40%;
   }
 
-  .one {
+  .level {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  body {
+    margin: 0px;
   }
 
 }
@@ -179,6 +195,7 @@ span.highlight {
 
   .td_intro {
     width: 65%;
+
   }
 
   .td_photo {

@@ -10,22 +10,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="shortcut icon" type="image/x-icon" href="images/profile-circle-2.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <script src="Components.js" ></script>
 </head>
-
 
 <body style="background-color: white;">
   <table class="tableDefault" style="max-width: 1000px;">
     <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
+      <tr>
+        <td>
           <!-- Bio -->
           <table class="tableDefault">
             <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;vertical-align:middle" class="td_intro">
+              <tr>
+                <td style="padding:20px" class="td_intro">
                   <p style="text-align:center">
                     <name>Jinsen Wu</name>
                   </p>
@@ -53,405 +51,187 @@
                     </div>
                   </div>
                 </td>
-                <td style="padding:2.5%", class="td_photo">
-                  <img class="selfi" alt="profile photo" src="images/me-circle.png"
-                    class="hoverZoomLink">
-                </td>
               </tr>
             </tbody>
           </table>
 
           <!-- Experience -->
-          <table class="tableDefault">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h1>Experience</h1>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="experienceTable"></div>
+          <script>
+            const expContainer = document.querySelector("#experienceTable");
 
+            const expHeader = headerComponent({
+              header: "Experience"
+            })
 
-          <table class="tableWhite">
-            <tbody>
-              <tr onmouseout="ict_stop()" onmouseover="ict_start()" id="ict">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='ict_image'>
-                        <img src="images/ICT.png" width="320" height="160" />
-                      </div>
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function ict_start() {
-                    }
-                    function ict_stop() {
-                    }
-                    ict_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <a href="https://www.apple.com/"><generalTitle>Institute for Creative Technologies</generalTitle></a>
-                  <br>
-                  <jobtitle>Student Worker</jobtitle>
-                  <br>
-                  May. 2023 - Present (Managed by <a href="https://ict.usc.edu/about-us/leadership/research-leadership/yajie-zhao/">Yajie Zhao</a>)
-                  <br>
-                  <p></p>
-                  <p>Created base pipeline, augmented data for the research on dense feature matching between UAV and Street View using PyTorch and PyTorch lightning.
-                    Currently working on a Physically based rendering pipeline using WebGPU for the Next Gen Text-to-Avatar.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            expContainer.innerHTML += expHeader
 
+            const ict = component({
+              tableClass: "tableWhite",
+              imageUrl: "images/ICT.png",
+              videoUrl: "",
+              titleUrl: "https://ict.usc.edu",
+              title: "Institute for Creative Technologies",
+              jobTitle: "Student Worker",
+              width: "320",
+              height: "160",
+              imgWidth: '320',
+              imgHeight: '160',
+              duration: "May. 2023 - Present",
+              description: "Created base pipeline, augmented data for the research on dense feature matching between UAV and Street View using PyTorch and PyTorch lightning. \
+                      Currently working on a Physically based rendering pipeline using WebGPU for the Next Gen Text-to-Avatar",
+            });
+            expContainer.innerHTML += ict
 
-          <table class="tableBlue">
-            <tbody>
-              <tr onmouseout="apple_stop()" onmouseover="apple_start()" id="apple">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                        <img src="images/apple.png" width="320" height="160"/>
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function apple_start() {
-                    }
-                    function apple_stop() {
-                    }
-                    apple_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top"; class="td2">
-                  <a href="https://www.apple.com/"><generalTitle>Apple</generalTitle></a>
-                  <br>Software Engineer Intern
-                  <br>
-                  May. 2022 - Sep. 2022 (Managed by <a href="https://contactout.com/Jeffrey-Bartunek-51233087">Jeffrey Bartunek</a>)
-                  <br>
-                  <p></p>
-                  <p>Constructed and integrated a Code Coverage Analysis server with Redis for robust performance, AWS S3 Bucket for file storage, Docker and Kubernetes for portability, and D3.js for data visualizations.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const apple = component({
+              tableClass: "tableBlue",
+              imageUrl: "images/apple.png",
+              videoUrl: "",
+              titleUrl: "https://www.apple.com/",
+              title: "Apple",
+              jobTitle: "Software Engineer Intern",
+              width: "320",
+              height: "160",
+              imgWidth: '320',
+              imgHeight: '160',
+              duration: "May. 2022 - Sep. 2022",
+              description: "Created base pipeline, augmented data for the research on dense feature matching between UAV and Street View using PyTorch and PyTorch lightning. \
+                      Currently working on a Physically based rendering pipeline using WebGPU for the Next Gen Text-to-Avatar",
+            });
+            expContainer.innerHTML += apple
 
-          <table class="tableWhite">
-            <tbody>
-              <tr onmouseout="cbl_stop()" onmouseover="cbl_start()" id="cbl">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='cbl_image'>
-                        <img src="images/cbl.png" width="320" height="160"/>
-                      </div>
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function cbl_start() {
-                    }
-                    function cbl_stop() {
-                    }
-                    cbl_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <a href="https://www.apple.com/"><generalTitle>Columbia Build Lab</generalTitle></a>
-                  <br>Software Engineer
-                  <br>
-                  Jan. 2022 - May. 2022
-                  <br>
-                  <p></p>
-                  <p>Construct Admin portal frontend with React.js and backend with Node.js and deploy website on AWS EC2.  Manage a 3-people software engineering team to build a scalable foundation for a startup and release alpha testing.                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const cbl = component({
+              tableClass: "tableWhite",
+              imageUrl: "images/cbl.png",
+              videoUrl: "",
+              titleUrl: "https://www.hippomenu.com/",
+              title: "Columbia Build Lab - Hippo",
+              jobTitle: "Software Engineer",
+              width: "320",
+              height: "160",
+              imgWidth: '320',
+              imgHeight: '160',
+              duration: "Jan. 2022 - May. 2022",
+              description: "Construct Admin portal frontend with React.js and backend with Node.js and deploy website on AWS EC2.  \
+              Manage a 3-people software engineering team to build a scalable foundation for a startup and release alpha testing. ",
+            });
+            expContainer.innerHTML += cbl
 
+          </script>
 
 
           <!-- Projects -->
-          <table class="tableDefault">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h1>Computer Graphics</h1><br>
-                  <h7>Hover or click over projects to play</h7>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="projectTable"></div>
+          <script>
+            const projContainer = document.querySelector("#projectTable");
 
-          <table class="tableWhite">
-            <tbody>
-              <tr onmouseout="metal_demo_stop()" onmouseover="metal_demo_start()" id="metal_demo">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='metal_demo_video'>
-                        <video width="320" height="180" muted autoplay loop>
-                          <source src="images/metal_demos.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/metal_demos.png' video width="320" height="180">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function metal_demo_start() {
-                      var videoElem = document.querySelector('#metal_demo_video video');
-                      // videoElem.currentTime = 0;
-                      videoElem.play();
-                      document.getElementById('metal_demo_video').style.opacity = "1";
-                    }
-                    function metal_demo_stop() {
-                      document.getElementById('metal_demo_video').style.opacity = "0";
-                    }
-                    metal_demo_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <generalTitle>Metal Demos</generalTitle>
-                  <br>
-                  Oct. 2023 (WIP)
-                  <br>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/nameslessjin/Learning-Metal">code</a>
-                  <p></p>
-                  <p>
-                    Venturing into the world of modern graphics with Metal as my guiding star! Proudly showcasing demos that feature cutting-edge rendering techniques: Physical-Based Rendering, Tile-Based Deferred Rendering, Shadow Mapping, and Particle and Flocking Systems. Enjoy! 
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const projectHeader = headerComponent({
+              header: "Computer Graphics",
+              subheader: "Hover or click over projects to play"
+            })
+            projContainer.innerHTML += projectHeader
 
-          <table class="tableBlue">
-            <tbody>
-              <tr onmouseout="rasterizer_stop()" onmouseover="rasterizer_start()" id="rasterizer">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='rasterizer_video' style="height: 180px;">
-                        <video width="320" height="180" muted autoplay loop>
-                          <source src="images/rasterizer.mp4" type="video/mp4">360
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/teapot.jpg' video width="180" height="180">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function rasterizer_start() {
-                      var videoElem = document.querySelector('#rasterizer_video video');
-                      videoElem.play();
-                      document.getElementById('rasterizer_video').style.opacity = "1";
-                    }
-                    function rasterizer_stop() {
-                      document.getElementById('rasterizer_video').style.opacity = "0";
-                    }
-                    rasterizer_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top;" class="td2">
-                  <generalTitle>CPU Renderer</generalTitle>
-                  <br>
-                  Sep. 2023 - Oct. 2023
-                  <br>
-                  <p></p>
-                  <p>
-                    Crafted a CPU renderer from scratch in C++, showcasing components of the graphics pipeline.  Framebuffer management, depth testing and scanline algorithm for efficient rendering.
-                    Seamless space transformations from model to screen.  Enhanced texture quality with normal interpolation, UV perspective correction and bilinear interpolation.  Implemented Phong Shading for lightning effects.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const metal_demos = component({
+              tableClass: "tableWhite",
+              imageUrl: "images/metal_demos.png",
+              videoUrl: "images/metal_demos.mp4",
+              titleUrl: "",
+              title: "Metal Demos",
+              github: "https://github.com/nameslessjin/Learning-Metal",
+              width: "320",
+              height: "180",
+              imgWidth: '320',
+              imgHeight: '180',
+              duration: "Oct. 2023 (WIP)",
+              description: "Venturing into the world of modern graphics with Metal as my guiding star! Proudly showcasing demos that feature cutting-edge rendering techniques: Physical-Based Rendering, Tile-Based Deferred Rendering, Shadow Mapping, and Particle and Flocking Systems. Enjoy!",
+            });
+            projContainer.innerHTML += metal_demos;
 
-          <table class="tableWhite">
-            <tbody>
-              <tr onmouseout="mocap_stop()" onmouseover="mocap_start()" id="mocap">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='mocap_video'>
-                        <video width="320" height="180" muted autoplay loop>
-                          <source src="images/mocap.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/mocap.png' video width="320" height="180">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function mocap_start() {
-                      var videoElem = document.querySelector('#mocap_video video');
-                      // videoElem.currentTime = 0;
-                      videoElem.play();
-                      document.getElementById('mocap_video').style.opacity = "1";
-                    }
-                    function mocap_stop() {
-                      document.getElementById('mocap_video').style.opacity = "0";
-                    }
-                    mocap_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <generalTitle>Mocap Interpolation</generalTitle>
-                  <br>
-                  Sep. 2023
-                  <br>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/nameslessjin/Mocap-Interpolation">code</a>
-                  <p></p>
-                  <p>
-                    Investigate the effects of various interpolation methods (Linear and Bezier) and rotation representations (Euler angles and Quaternions) on quality of motion-captured animations.  The methodology involves selecting
-                    a sequence of N frames, isolating keyframes, and then interpolating the motion for the frames in between.  The resulting animation is compared to the origin to assess smoothness and any visual artifacts.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const rasterizer = component({
+              tableClass: "tableBlue",
+              imageUrl: "images/teapot.jpg",
+              videoUrl: "images/rasterizer.mp4",
+              titleUrl: "",
+              title: "CPU Renderer",
+              github: "",
+              imgWidth: '180',
+              imgHeight: '180',
+              width: "320",
+              height: "180",
+              duration: "Sep. 2023 - Oct. 2023",
+              description: "Crafted a CPU renderer from scratch in C++, showcasing components of the graphics pipeline.  Framebuffer management, depth testing and scanline algorithm for efficient rendering. \
+                    Seamless space transformations from model to screen.  Enhanced texture quality with normal interpolation, UV perspective correction and bilinear interpolation.  Implemented Phong Shading for lightning effects.",
+            })
+            projContainer.innerHTML += rasterizer;
 
-          <table class="tableBlue">
-            <tbody>
-              <tr onmouseout="spring_stop()" onmouseover="spring_start()" id="spring">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='spring_video' style="height: 240px;">
-                        <video width="320" height="240" muted autoplay loop>
-                          <source src="images/spring.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/spring.png' video width="320" height="240">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function spring_start() {
-                      var videoElem = document.querySelector('#spring_video video');
-                      // videoElem.currentTime = 0;
-                      videoElem.play();
-                      document.getElementById('spring_video').style.opacity = "1";
-                    }
-                    function spring_stop() {
-                      document.getElementById('spring_video').style.opacity = "0";
-                    }
-                    spring_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <generalTitle>Jello Spring System</generalTitle>
-                  <br>
-                  Aug. 2023
-                  <br>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/nameslessjin/Jello-Spring-System">code</a>
-                  <p></p>
-                  <p>
-                    Jello Spring system is a physically-based mass-spring simulation of a cube situated within an external force field.  The simulation showcases both collisions and deformation.
-                      I designed the environment, drawing inspiration from the Cornell Box.   
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const mocap = component({
+              tableClass: "tableWhite",
+              imageUrl: "images/mocap.png",
+              videoUrl: "images/mocap.mp4",
+              titleUrl: "",
+              title: "Mocap Interpolation",
+              github: "https://github.com/nameslessjin/Mocap-Interpolation",
+              imgWidth: '320',
+              imgHeight: '180',
+              width: "320",
+              height: "180",
+              duration: "Sep. 2023",
+              description: "Investigate the effects of various interpolation methods (Linear and Bezier) and rotation representations (Euler angles and Quaternions) on quality of motion-captured animations.  The methodology involves selecting \
+                    a sequence of N frames, isolating keyframes, and then interpolating the motion for the frames in between.  The resulting animation is compared to the origin to assess smoothness and any visual artifacts.",
+            })
+            projContainer.innerHTML += mocap;
 
+            const spring = component({
+              tableClass: "tableBlue",
+              imageUrl: "images/spring.png",
+              videoUrl: "images/spring.mp4",
+              titleUrl: "",
+              title: "Jello Spring System",
+              github: "https://github.com/nameslessjin/Jello-Spring-System",
+              imgWidth: '320',
+              imgHeight: '240',
+              width: "320",
+              height: "240",
+              duration: "Aug. 2023",
+              description: "Jello Spring system is a physically-based mass-spring simulation of a cube situated within an external force field.  The simulation showcases both collisions and deformation. \
+                      I designed the environment, drawing inspiration from the Cornell Box."
+            })
+            projContainer.innerHTML += spring;
 
-          <table class="tableWhite">
-            <tbody>
-              <tr onmouseout="monte_carlos_stop()" onmouseover="monte_carlos_start()" id="monte_carlos">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='monte_carlos_video' style="height: 240px;">
-                        <video width="320" height="240" muted autoplay loop>
-                          <source src="images/monte_carlos.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/image5.jpeg' width="320" height="240">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function monte_carlos_start() {
-                      var videoElem = document.querySelector('#monte_carlos_video video');
-                      // videoElem.currentTime = 0;
-                      videoElem.play();
-                      document.getElementById('monte_carlos_video').style.opacity = "1";
-                    }
-                    function monte_carlos_stop() {
-                      document.getElementById('monte_carlos_video').style.opacity = "0";
-                    }
-                    monte_carlos_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <generalTitle>Monte-Carlo CPU Ray Tracer</generalTitle>
-                  <br>
-                  Apr. 2023
-                  <br>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/nameslessjin/Monte-Carlo-CPU-Ray-Tracer">code</a>
-                  <p></p>
-                  <p>
-                    A state-of-the-art ray tracer that harnesses the power of BVH, Monte Carlo and BRDF.  It is capable of rendering physically realistic opaque surface with reflections and soft shadows.
-                    I also add anti-aliasing (with stratified sampling) to enhance image quality.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const monteCarlos = component({
+              tableClass: "tableWhite",
+              imageUrl: "images/image5.jpeg",
+              videoUrl: "images/monte_carlos.mp4",
+              titleUrl: "",
+              title: "Monte-Carlo CPU Ray Tracer",
+              github: "https://github.com/nameslessjin/Monte-Carlo-CPU-Ray-Tracer",
+              imgWidth: '320',
+              imgHeight: '240',
+              width: "320",
+              height: "240",
+              duration: "Apr. 2023",
+              description: "A state-of-the-art ray tracer that harnesses the power of BVH, Monte Carlo and BRDF.  It is capable of rendering physically realistic opaque surface with reflections and soft shadows.\
+                    I also add anti-aliasing (with stratified sampling) to enhance image quality."
+            })
+            projContainer.innerHTML += monteCarlos;
 
-
-          <table class="tableBlue">
-            <tbody>
-              <tr onmouseout="coaster_stop()" onmouseover="coaster_start()" id="coaster">
-                <td class="td1">
-                  <div class="level">
-                    <div class="midlevel">
-                      <div class="sublevel" id='coaster_video'>
-                        <video width="320" height="180" muted autoplay loop>
-                          <source src="images/coaster.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <img src='images/coaster.png' width="320" height="180">
-                    </div>
-                  </div>
-                  <script type="text/javascript">
-                    function coaster_start() {
-                      var videoElem = document.querySelector('#coaster_video video');
-                      // videoElem.currentTime = 0;
-                      videoElem.play();
-                      document.getElementById('coaster_video').style.opacity = "1";
-                    }
-                    function coaster_stop() {
-                      document.getElementById('coaster_video').style.opacity = "0";
-                    }
-                    coaster_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;vertical-align:text-top" class="td2">
-                  <generalTitle>Sunset Roller Coaster</generalTitle>
-                  <br>
-                  Mar. 2023
-                  <br>
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/nameslessjin/Roller-Coaster-Simulator">code</a>
-                  <p></p>
-                  <p>
-                    A roller coaster simulation implemented in OpenGL with phong shading.  The tracks were created with Catmnull Rom splines.  I also 
-                    modified the velocity to make it physically realistic in  terms of gravity using height difference.  Enjoy your ride at sunset!
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            const coaster = component({
+              tableClass: "tableBlue",
+              imageUrl: "images/coaster.png",
+              videoUrl: "images/coaster.mp4",
+              titleUrl: "",
+              title: "Sunset Roller Coaster",
+              github: "https://github.com/nameslessjin/Roller-Coaster-Simulator",
+              imgWidth: '320',
+              imgHeight: '180',
+              width: "320",
+              height: "180",
+              duration: "Mar. 2023",
+              description: "A roller coaster simulation implemented in OpenGL with phong shading.  The tracks were created with Catmnull Rom splines.  I also \
+                    modified the velocity to make it physically realistic in  terms of gravity using height difference.  Enjoy your ride at sunset!"
+            })
+            projContainer.innerHTML += coaster;
+          </script>
 
           <!-- Credits -->
           <table class="tableDefault">
