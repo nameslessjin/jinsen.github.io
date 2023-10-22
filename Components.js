@@ -8,7 +8,7 @@ function component(options) {
     let githubLink = 
         !github || github.length == 0 
         ? "" 
-        : `<br><i class="fa fa-github"></i><a href="${github}">code</a>`
+        : textIcon({content: "code", link: github, icon: "fa-github"})
 
     let mediaHtml = 
         !videoUrl || videoUrl.length == 0 
@@ -51,7 +51,8 @@ function component(options) {
                 <td class="td2">
                     ${titleHtml}
                     <br>
-                        ${duration}
+                    ${duration}
+                    <br>
                     ${githubLink}
                     <p>
                         ${description}
@@ -103,4 +104,42 @@ function headerComponent(options) {
     </table>
     `
     return html;
+}
+
+function renderTable(tableId, content) {
+    const container = document.getElementById(tableId)
+
+    // create and append the header
+    const headerCmpt = headerComponent(content.header)
+    container.insertAdjacentHTML('beforeend', headerCmpt);
+
+    for (let i = 0; i < content.content.length; i++) {
+        const c = content.content[i];
+        const cmpt = component({
+            tableClass: i % 2 == 0 ? "tableWhite" : "tableBlue",
+            ...c
+        });
+
+        container.insertAdjacentHTML('beforeend', cmpt);
+    }
+}
+
+function textIcon(options) {
+    const {content, icon, link} = options
+
+    const html = `
+    <div class="divIconText">
+        <i class="fa ${icon}"></i>
+        <a href="${link}">${content}</a>
+    </div>
+    `
+    return html
+}
+
+function renderExperience(tableId) {
+    renderTable(tableId, ExpContent)
+}
+
+function renderProject(tableId) {
+    renderTable(tableId, ProjectContent)
 }
