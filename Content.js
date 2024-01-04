@@ -49,38 +49,35 @@ const ExpContent = {
 
 const ProjectContent = {
     header: {
-        header: "Computer Graphics",
+        header: "Projects",
         subheader: "Hover over or click projects to play"
     },
     content: [
         {
+            imageUrl: "images/visionweather.png",
+            videoUrl: "images/visionweather.mp4",
+            titleUrl: "",
+            title: "Vision Weather",
+            github: "https://github.com/nameslessjin/VisionWeather",
+            width: "320",
+            height: "200",
+            imgWidth: '270',
+            imgHeight: '200',
+            duration: "Dec. 2023 - Jan. 2024",
+            description: "Elevating the weather app experience with VisionOS, adding a layer of immersive weather effects that enrich the user’s interaction with their environment",
+        },
+        {
             imageUrl: "images/metal_demos.png",
             videoUrl: "images/metal_demos.mp4",
             titleUrl: "",
-            title: "Metal Demos",
+            title: "Metal Engine",
             github: "https://github.com/nameslessjin/Learning-Metal",
             width: "320",
             height: "180",
             imgWidth: '320',
             imgHeight: '180',
-            duration: "Oct. 2023 (WIP)",
+            duration: "Oct. 2023 - Dec. 2023",
             description: "Venturing into the world of modern graphics with Metal as my guiding star! Proudly showcasing demos that feature cutting-edge rendering techniques: Physical-Based Rendering, Tile-Based Deferred Rendering, Shadow Mapping, and Particle and Flocking Systems. Enjoy!",
-
-        },
-        {
-            imageUrl: "images/teapot.jpg",
-            videoUrl: "images/rasterizer.mp4",
-            titleUrl: "",
-            title: "CPU Renderer",
-            github: "",
-            imgWidth: '180',
-            imgHeight: '180',
-            width: "320",
-            height: "180",
-            duration: "Sep. 2023 - Oct. 2023",
-            description: "Crafted a CPU renderer from scratch in C++, showcasing components of the graphics pipeline.  Framebuffer management, depth testing and scanline algorithm for efficient rendering. \
-                  Seamless space transformations from model to screen.  Enhanced texture quality with normal interpolation, UV perspective correction and bilinear interpolation.  Implemented Phong Shading for lightning effects.",
-
         },
         {
             imageUrl: "images/mocap.png",
