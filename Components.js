@@ -1,14 +1,33 @@
 function component(options) {
-    const {tableClass, imageUrl, videoUrl, titleUrl, title, github, width, height,
+    const {tableClass, imageUrl, videoUrl, titleUrl, title, github, width, height, icons,
         jobTitle, duration, description, imgWidth, imgHeight} = options
 
     let trId = title.toLowerCase().replace(/ /g, "_")
     let videoId = trId + "_video";
 
-    let githubLink = 
-        !github || github.length == 0 
-        ? "" 
-        : textIcon({content: "code", link: github, icon: "fa-github"})
+    let textIcons = icons ? icons.map(icon => {
+        let symbol = "fa-solid fa-star"
+        if (icon.name != null) {
+            switch (icon.name) {
+                case "github":
+                    symbol = "fa-brands fa-github"
+                    break
+                case "video": 
+                    symbol = "fa-brands fa-youtube"
+                    break
+                case "paper":
+                    symbol = "fa-solid fa-newspaper"
+                    break
+                case "presentation":
+                    symbol = "fa-solid fa-file-powerpoint"
+                    break
+                default:
+                    break
+            }
+        }
+        return textIcon({content: icon.text, link: icon.link, icon: symbol})
+    }).join('') : []
+
 
     let mediaHtml = 
         !videoUrl || videoUrl.length == 0 
@@ -53,7 +72,9 @@ function component(options) {
                     <br>
                     ${duration}
                     <br>
-                    ${githubLink}
+                    <div class="icons">
+                    ${textIcons}
+                    <div>
                     <p>
                         ${description}
                     </p>
@@ -129,7 +150,7 @@ function textIcon(options) {
 
     const html = `
     <div class="divIconText">
-        <i class="fa ${icon}"></i>
+        <i class="${icon}"></i>
         <a href="${link}">${content}</a>
     </div>
     `

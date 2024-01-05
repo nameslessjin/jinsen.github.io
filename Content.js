@@ -59,7 +59,11 @@ const ProjectContent = {
             videoUrl: "images/visionweather.mp4",
             titleUrl: "",
             title: "Vision Weather",
-            github: "https://github.com/nameslessjin/VisionWeather",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/VisionWeather",
+                text: "code"
+            }],
             width: "320",
             height: "200",
             imgWidth: '265',
@@ -68,11 +72,50 @@ const ProjectContent = {
             description: "Elevating the weather app experience with VisionOS, adding a layer of immersive weather effects that enrich the user’s interaction with their environment",
         },
         {
+            imageUrl: "images/OneClickUrbanscape.png",
+            videoUrl: "images/OneClickUrbanscape.mp4",
+            titleUrl: "",
+            title: "One Click Urbanscape",
+            icons: [
+                {
+                name: "video",
+                link: "https://youtu.be/nueLV8pEMVw",
+                text: "Video 1"
+                },
+                {
+                    name: "video",
+                    link: "https://youtu.be/9ibRVFNS0Bk",
+                    text: "Video 2"
+                },
+                {
+                    name: "presentation",
+                    link: "https://docs.google.com/presentation/d/1sHDYD3GeyVoCq0qs2vxdNiVn3zbfl-ox/edit?usp=sharing&ouid=113027855812997335954&rtpof=true&sd=true",
+                    text: "Presentation"
+                },
+                {
+                    name: "paper",
+                    link: "https://drive.google.com/file/d/1sHTwbYgnyOf42kUkA4jrQIIymfWzoQ8N/view?usp=sharing",
+                    text: "Paper"
+                }
+            ],
+            width: "320",
+            height: "170",
+            imgWidth: '320',
+            imgHeight: '170',
+            duration: "Nov. 2023",
+            description: "This project explores urbanscape creation by merging Houdini's procedural terrain modeling with Unreal Engine's superior rendering.\
+              A one-click solution brings to life detailed cityscapes.",
+        },
+        {
             imageUrl: "images/MetalEngine.png",
             videoUrl: "images/MetalEngine.mp4",
             titleUrl: "",
             title: "Metal Engine",
-            github: "https://github.com/nameslessjin/Learning-Metal",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/Learning-Metal",
+                text: "code"
+            }],
             width: "320",
             height: "180",
             imgWidth: '320',
@@ -85,7 +128,11 @@ const ProjectContent = {
             videoUrl: "images/mocap.mp4",
             titleUrl: "",
             title: "Mocap Interpolation",
-            github: "https://github.com/nameslessjin/Mocap-Interpolation",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/Mocap-Interpolation",
+                text: "code"
+            }],
             imgWidth: '320',
             imgHeight: '180',
             width: "320",
@@ -100,7 +147,11 @@ const ProjectContent = {
             videoUrl: "images/spring.mp4",
             titleUrl: "",
             title: "Jello Spring System",
-            github: "https://github.com/nameslessjin/Jello-Spring-System",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/Jello-Spring-System",
+                text: "code"
+            }],
             imgWidth: '320',
             imgHeight: '240',
             width: "320",
@@ -114,7 +165,11 @@ const ProjectContent = {
             videoUrl: "images/monte_carlos.mp4",
             titleUrl: "",
             title: "Monte-Carlo CPU Ray Tracer",
-            github: "https://github.com/nameslessjin/Monte-Carlo-CPU-Ray-Tracer",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/Monte-Carlo-CPU-Ray-Tracer",
+                text: "code"
+            }],
             imgWidth: '320',
             imgHeight: '240',
             width: "320",
@@ -128,7 +183,11 @@ const ProjectContent = {
             videoUrl: "images/coaster.mp4",
             titleUrl: "",
             title: "Sunset Roller Coaster",
-            github: "https://github.com/nameslessjin/Roller-Coaster-Simulator",
+            icons: [{
+                name: "github",
+                link: "https://github.com/nameslessjin/Roller-Coaster-Simulator",
+                text: "code"
+            }],
             imgWidth: '320',
             imgHeight: '180',
             width: "320",
