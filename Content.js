@@ -75,7 +75,7 @@ const ProjectContent = {
             imageUrl: "images/OneClickUrbanscape.png",
             videoUrl: "images/OneClickUrbanscape.mp4",
             titleUrl: "",
-            title: "One Click Urbanscape",
+            title: "One-Click Urbanscape",
             icons: [
                 {
                 name: "video",
@@ -95,7 +95,7 @@ const ProjectContent = {
                 {
                     name: "paper",
                     link: "https://drive.google.com/file/d/1sHTwbYgnyOf42kUkA4jrQIIymfWzoQ8N/view?usp=sharing",
-                    text: "Paper"
+                    text: "Report"
                 }
             ],
             width: "320",
