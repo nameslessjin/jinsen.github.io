@@ -28,7 +28,8 @@ const ExpContent = {
             imgWidth: '320',
             imgHeight: '160',
             duration: "May. 2022 - Sep. 2022",
-            description: "Constructed and integrated a Code Coverage Analysis server with Redis for robust performance, AWS S3 Bucket for file storage, Docker and Kubernetes for portability, and D3.js for data visualizations.",
+            description: "Constructed and integrated a Code Coverage Analysis server with Redis for robust performance, \
+            AWS S3 Bucket for file storage, Docker and Kubernetes for portability, and D3.js for data visualizations.",
         },
         {
             imageUrl: "images/cbl.png",
@@ -61,14 +62,14 @@ const ProjectContent = {
             github: "https://github.com/nameslessjin/VisionWeather",
             width: "320",
             height: "200",
-            imgWidth: '270',
+            imgWidth: '265',
             imgHeight: '200',
             duration: "Dec. 2023 - Jan. 2024",
             description: "Elevating the weather app experience with VisionOS, adding a layer of immersive weather effects that enrich the user’s interaction with their environment",
         },
         {
-            imageUrl: "images/metal_demos.png",
-            videoUrl: "images/metal_demos.mp4",
+            imageUrl: "images/MetalEngine.png",
+            videoUrl: "images/MetalEngine.mp4",
             titleUrl: "",
             title: "Metal Engine",
             github: "https://github.com/nameslessjin/Learning-Metal",
@@ -77,7 +78,7 @@ const ProjectContent = {
             imgWidth: '320',
             imgHeight: '180',
             duration: "Oct. 2023 - Dec. 2023",
-            description: "Venturing into the world of modern graphics with Metal as my guiding star! Proudly showcasing demos that feature cutting-edge rendering techniques: Physical-Based Rendering, Tile-Based Deferred Rendering, Shadow Mapping, and Particle and Flocking Systems. Enjoy!",
+            description: "Venturing into the world of modern graphics with Metal, showcasing a simple but powerful graphics engine with features: Deferred Rendering, PBR, IBL, Ray Marching, Character Animation and more!"
         },
         {
             imageUrl: "images/mocap.png",
