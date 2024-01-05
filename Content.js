@@ -196,6 +196,30 @@ const ProjectContent = {
             description: "A roller coaster simulation implemented in OpenGL with phong shading.  The tracks were created with Catmnull Rom splines.  I also \
                   modified the velocity to make it physically realistic in  terms of gravity using height difference.  Enjoy your ride at sunset!"
 
-        }
+        },
+        {
+            imageUrl: "images/squeeki.png",
+            videoUrl: "images/squeeki.mov",
+            titleUrl: "",
+            title: "Squeeki",
+            icons: [{
+                name: "appstore",
+                link: "https://apps.apple.com/ca/app/squeeki/id1529519910",
+                text: "ios"
+            },
+            {
+                name: "playstore",
+                link: "https://play.google.com/store/apps/details?id=com.squeeki&hl=en_US&gl=US",
+                text: "android"
+            }],
+            imgWidth: '140',
+            imgHeight: '300',
+            width: "320",
+            height: "300",
+            duration: "Jun. 2020 - Sep. 2021",
+            description: "Squeeki is the place where people come together to engage in interesting conversations, \
+            share their unique experiences, participate in fun tasks and events, and enjoy a rewarding experience."
+
+        },
     ]
 }

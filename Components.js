@@ -21,6 +21,12 @@ function component(options) {
                 case "presentation":
                     symbol = "fa-solid fa-file-powerpoint"
                     break
+                case "appstore":
+                    symbol = "fa-brands fa-app-store-ios"
+                    break
+                case "playstore":
+                    symbol = "fa-brands fa-google-play"
+                    break
                 default:
                     break
             }
@@ -36,7 +42,7 @@ function component(options) {
         :
         `
         <div class="sublevel" id='${videoId}' style="height: ${imgHeight}px">
-            <video width="${width}" height="${height}" muted loop>
+            <video width="${width}px" height="${height}px" muted loop>
                 <source src="${videoUrl}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
