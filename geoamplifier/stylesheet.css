@@ -2,3 +2,8 @@ body {
     background: #fdfcf9 no-repeat fixed top left;
     font-family:'Open Sans', sans-serif;
 }
+
+.btn-header {
+    background-color: #7f8fa6; /* Red */
+    color: #ffffff !important; /* White */
+}
