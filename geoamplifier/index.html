@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="width=device-width, initial-scale=1">
-    <meta name="description" content="GeoAmplifier: Feature Matching Enhancement through Geometry-Aware Optimization"/>
-    <title>GeoAmplifier: Feature Matching Enhancement through Geometry-Aware Optimization</title>
+    <meta name="description" content="Geometry-aware Feature Matcher for Reconstruction Enhancement"/>
+    <title>Geometry-aware Feature Matcher for Reconstruction Enhancement</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
-    <title>Hello, world!</title>
+    <title>Geometry-aware Feature Matcher for Reconstruction Enhancement</title>
 
   </head>
 
@@ -27,7 +27,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <h2><strong>GeoAmplifier: Feature Matching Enhancement through Geometry-Aware Optimization</strong></h2>
+              <h2><strong>Geometry-aware Feature Matcher for Reconstruction Enhancement</strong></h2>
               <hr>
               <h5 class="mb-3">
                 <!-- <a>Gonglin Chen</a>,
@@ -101,29 +101,28 @@
                 <video loop autoplay muted width="100%">
                   <source src="./resources/colmap.mp4" type="video/mp4">
                 </video>
-                <h5><strong>Colmap</strong></h5>
+                <h5><strong>SIFT + NN + COLMAP</strong></h5>
               </div>
 
               <div class="col-6">
                 <video loop autoplay muted width="100%">
                   <source src="./resources/ours.mp4" type="video/mp4">
                 </video>
-                <h5><strong>GeoAmplifier</strong></h5>
+                <h5><strong>Ours + COLMAP</strong></h5>
               </div>
             </div>
 
             <p class="text-justify">
-              Traditional structure-from-motion(SfM) pipelines often struggle in reconstructing scenes with significant viewpoint changes, 
-              which is especially evident for image sets containing both airborne and ground level images. They tend to generate separate models for such set. 
-              We propose a novel SfM system that leverages recent developed detector-free feature matchers, 
-              enabling more accurate and robust scene reconstruction. 
-              Our method first utilizes a detector-based matcher that can run in large batch to generate possible image pairs to avoid matching exhaustively using detector-free matchers which are computational expensive. 
-              Then, we propose a geometry-aware optimization module based on epipolar constraints, 
-              which introduces a geometry prior in feature matching, 
+              Structure-from-motion (SfM) pipelines often face challenges in reconstructing large-scale outdoor scenes with significant viewpoint changes, 
+              such as air-to-ground. They often fail to register airborne images with ground images. 
+              In this paper, we introduce a unique feature matcher that merges detector-free and detector-based methods. 
+              We also incorporate geometry cues along with appearance cues, aiming to improve the accuracy and robustness of scene reconstruction. 
+              Our method start with a detector-based matcher that can run in large batch to generate possible image pairs to avoid matching exhaustively using detector-free matchers which are computational expensive. 
+              Then, we propose a novel geometry-aware optimization module to a transformer-based detection free method, which introduces a geometry prior in feature matching, 
               providing supplementary information particularly useful in challenging scenarios where visual cues are insufficient or misleading. 
-              This module iteratively updates the fundamental matrix and filters out correspondences that violate epipolar constraints. 
-              Experiments demonstrate that our proposed method can improve the feature matching accuracy and reconstruction results on benchmark datasets. 
-              We further validate our method on a handcrafted dataset containing both airborne and ground images.
+              This proposed geometry-aware optimization module iteratively updates the fundamental matrix and filters out correspondences that violate epipolar constraints. E
+              xperiments demonstrate that our proposed framework can notably improve the accuracy of feature matching and reconstruction results on benchmark datasets in terms of accuracy and density. 
+              This is further confirmed on a proposed synthetic dataset involving air-to-ground cross-view images.
             </p>
 
           </div>
@@ -147,9 +146,12 @@
             </div>
   
             <p class="text-justify">
-              We present an overview of our pipeline above. 
-              Given a set of images, our pipeline first produces pair proposal by running exhaustive matching using SuperGlue in large batch with downsized images. 
-              Only image pairs obtained will be matched by the main mathcer. After running through all proposed image pairs, the final model is reconstructed using COLMAP.
+              An overview of the overall pipeline for SfM reconstruction. 
+              1. In the first step, the pipeline runs through all possible image pairs in down sized resolution to propose image pairs. 
+              2. A CNN feature extractor that extracts both coarse-level and fine-level features from I<sup>A</sup> and I<sup>B</sup>, and the coarse-level features enter transformer module for feature interaction. 
+              3. A geometry-aware optimization module is applied to update the confidence matrix following geometry constraints iteratively with anchor points from SuperGlue. 
+              4. Final matches are refined using fine level feature maps. 
+              5. The matcher is integrated with COLMAP for incremental reconstruction.
             </p>
   
           </div>
@@ -202,7 +204,7 @@
               <code>
                 @article{
                   name, 
-                  title={{GeoAmplifier}: Feature Matching Enhancement through Geometry-Aware Optimization},
+                  title={Geometry-aware Feature Matcher for Reconstruction Enhancement},
                   author={author1, author2, author3, author4, author5}
                   <!-- author={Chen, Gonglin and Wu, Jinsen and Teng, Wenbin and Gao, Zhiyuan and Feng, Andrew and Qin, Rongjun and Zhao, Yajie} -->
                   year={2024}
