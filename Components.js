@@ -76,7 +76,7 @@ function component(options) {
                 <td class="td2">
                     ${titleHtml}
                     <br>
-                    ${jobTitle}
+                    ${jobTitle || ""}
                     <br>
                     ${duration}
                     <br>
