@@ -76,6 +76,8 @@ function component(options) {
                 <td class="td2">
                     ${titleHtml}
                     <br>
+                    ${jobTitle}
+                    <br>
                     ${duration}
                     <br>
                     <div class="icons">
