@@ -8,6 +8,11 @@ const ExpContent = {
             videoUrl: "",
             titleUrl: "https://apps.apple.com/us/app/spacelingo/id6736407201",
             title: "SpaceLingo",
+            icons: [{
+                name: "appstore",
+                link: "https://apps.apple.com/us/app/spacelingo/id6736407201",
+                text: "ios"
+            }],
             jobTitle: "Cofounder",
             width: "320",
             height: "160",
