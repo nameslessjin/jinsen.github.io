@@ -4,6 +4,20 @@ const ExpContent = {
     },
     content: [
         {
+            imageUrl: "images/SpaceLingo.png",
+            videoUrl: "",
+            titleUrl: "https://apps.apple.com/us/app/spacelingo/id6736407201",
+            title: "SpaceLingo",
+            jobTitle: "Cofounder",
+            width: "320",
+            height: "160",
+            imgWidth: '320',
+            imgHeight: '160',
+            duration: "Aug. 2024 - Present",
+            description: "With SpaceLingo, your language learning experience becomes immersive, practical, and personal. With generative AI, Augmented Reality, and object recognition, \
+            you can truly learn how to talk about your daily life in a new language anytime, anywhere.",
+        },
+        {
             imageUrl: "images/ICT.png",
             videoUrl: "",
             titleUrl: "https://ict.usc.edu",
@@ -13,7 +27,7 @@ const ExpContent = {
             height: "160",
             imgWidth: '320',
             imgHeight: '160',
-            duration: "May. 2023 - Present",
+            duration: "May. 2023 - May 2024",
             description: "Created base pipeline, augmented data for the research on dense feature matching between UAV and Street View using PyTorch and PyTorch lightning. \
             Currently working on a Physically based rendering pipeline using WebGPU for the Next Gen Text-to-Avatar",
         },
