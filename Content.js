@@ -11,7 +11,7 @@ const ExpContent = {
             jobTitle: "Cofounder",
             width: "320",
             height: "160",
-            imgWidth: '320',
+            imgWidth: '160',
             imgHeight: '160',
             duration: "Aug. 2024 - Present",
             description: "With SpaceLingo, your language learning experience becomes immersive, practical, and personal. With generative AI, Augmented Reality, and object recognition, \
